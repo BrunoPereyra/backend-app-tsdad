@@ -2,14 +2,14 @@ require("dotenv").config()
 require("./db")
 const express = require("express")
 const app = express()
-const morgan = require("morgan")
+// const morgan = require("morgan")
 
 const handleErrors = require("./middleware/handleErrors")
 const useExtractor = require("./middleware/useExtractor")
 const notFound = require("./middleware/notFound")
 const { PORT } = process.env
 
-app.use(morgan("dev"))
+// app.use(morgan("dev"))
 app.use(express.json())
 
 app.use("/signup", require("./routers/signup.routes"))
