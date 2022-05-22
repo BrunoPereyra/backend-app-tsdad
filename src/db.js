@@ -1,4 +1,3 @@
-require("colors")
 const mongoose = require("mongoose")
 const { db } = process.env
 
