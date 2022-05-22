@@ -21,5 +21,5 @@ app.use(handleErrors)
 app.use(notFound)
 
 app.listen(PORT, () => {
-    console.log(`server listening in ${PORT}`.bgBlue.white.bold);
+    console.log(`server listening in ${PORT}`);
 })
