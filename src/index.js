@@ -17,8 +17,8 @@ app.use("/login", require("./routers/login.routes"))
 app.use("/operationalGet", useExtractor, require("./routers/operationalGet.routes"))
 app.use("/operationalPost", useExtractor, require("./routers/operationalPost.routes"))
 
-app.use(handleErrors)
 app.use(notFound)
+app.use(handleErrors)
 
 app.listen(PORT, () => {
     console.log(`server listening in ${PORT}`);
