@@ -4,7 +4,7 @@ const express = require("express")
 const app = express()
 // const morgan = require("morgan")
 
-const handleErrors = require("./middleware/handleErrors")
+// const handleErrors = require("./middleware/handleErrors")
 const useExtractor = require("./middleware/useExtractor")
 const notFound = require("./middleware/notFound")
 const { PORT } = process.env
@@ -17,7 +17,7 @@ app.use("/login", require("./routers/login.routes"))
 app.use("/operationalGet", useExtractor, require("./routers/operationalGet.routes"))
 app.use("/operationalPost", useExtractor, require("./routers/operationalPost.routes"))
 
-app.use(handleErrors)
+// app.use(handleErrors)
 app.use(notFound)
 
 app.listen(PORT, () => {

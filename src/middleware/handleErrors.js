@@ -8,7 +8,7 @@ module.exports = (error, req, res) => {
     } else if (error.name === "TokenExpirerError") {
         res.status(409).send({ error: "token expired" })
     } else {
-        console.error(error.name)
+        console.error(error.name, "aaaa")
         res.status(500).end()
     }
 }
