@@ -2,6 +2,7 @@ require("dotenv").config()
 require("./db")
 const express = require("express")
 const app = express()
+const cors = require("cors")
 // const morgan = require("morgan")
 
 const handleErrors = require("./middleware/handleErrors")
@@ -10,7 +11,13 @@ const notFound = require("./middleware/notFound")
 const { PORT } = process.env
 
 // app.use(morgan("dev"))
+
 app.use(express.json())
+var corsOptions = {
+    origin: 'http://localhost:3000',
+    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+  }
+app.use(cors(corsOptions))
 
 app.use("/signup", require("./routers/signup.routes"))
 app.use("/login", require("./routers/login.routes"))
