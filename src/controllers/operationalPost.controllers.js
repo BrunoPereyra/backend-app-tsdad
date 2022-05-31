@@ -35,7 +35,6 @@ const OperationalPost = async (req, ress) => {
         leverage &&
         Risk
     ) {
-        console.log("aaa");
         const Operational = await new Operationals({
             Trade,
             EntryDate,

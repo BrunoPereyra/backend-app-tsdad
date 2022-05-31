@@ -19,12 +19,12 @@ const Signup = async (req, ress) => {
         })
         await user.save()
         ress.status(200).json({
-            res: "user save"
+            ress: "user save"
         })
 
     } else {
         ress.status(404).json({
-            res: "faliles,new user"
+            ress: "faliles,new user"
         })
     }
 }
